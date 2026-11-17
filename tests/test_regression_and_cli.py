@@ -33,6 +33,15 @@ class TestCli(unittest.TestCase):
                               cwd=ROOT, capture_output=True, text=True, encoding="utf-8",
                               env={**os.environ, "PYTHONUTF8": "1"}, timeout=600)
 
+    def test_help_survives_western_windows_encoding(self):
+        result = subprocess.run(
+            [sys.executable, "automation/main.py", "--help"], cwd=ROOT,
+            capture_output=True, timeout=60,
+            env={**os.environ, "PYTHONUTF8": "0", "PYTHONIOENCODING": "cp1252"},
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("工作站", result.stdout.decode("utf-8"))
+
     def test_ref_list(self):
         r = self.run_cli("ref", "list")
         self.assertEqual(r.returncode, 0, r.stderr)
