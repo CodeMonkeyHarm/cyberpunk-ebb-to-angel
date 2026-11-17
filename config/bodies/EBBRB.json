@@ -1,0 +1,54 @@
+{
+  "schema": "cp77.body.profile/v1",
+  "body_id": "EBBRB",
+  "display_name": "Hyst EBB 5.0.0 BIG BOOTY（EBBRB，女性全身）",
+  "asset_version": "5.0.0",
+  "available": true,
+  "status": "USER_INPUT_REQUIRED",
+  "source": {
+    "packs": [],
+    "mesh_json": "inputs/EBBRB/body.mesh.json",
+    "raw_mesh": "inputs/EBBRB/body.mesh",
+    "provenance": "User-supplied reference body. Verify its version before conversion.",
+    "redistribution": "Follow the original asset author's license."
+  },
+  "model": {
+    "region": "full_body",
+    "gender": "female",
+    "appearance": "01_ca_pale",
+    "note": "CMesh 含 12 个 appearance，均为肤色变体；只导出默认外观。含 8 chunk，与 ANGEL 同源拓扑"
+  },
+  "rig": {
+    "mode": "hierarchy_only",
+    "rig_json": "references/rigs/json/player_woman_base_deformations.rig.json",
+    "rig_name": "player_woman_base_deformations",
+    "expected_rig_bones": 183,
+    "note": "rig 只提供父子关系；关节矩阵一律由 CMesh boneRigMatrices 反推"
+  },
+  "expectations": {
+    "vertices": 91371,
+    "triangles": 169968,
+    "bones": 167,
+    "chunks": 8,
+    "height_m": 1.524
+  },
+  "output": {
+    "dir": "references/bodies/{body_id}/{asset_version}",
+    "static": "{body_id}_Body_Static.glb",
+    "skinned": "{body_id}_Body_Skinned.glb",
+    "skeleton": "{body_id}_Skeleton.json",
+    "weights": "{body_id}_Weight_Analysis.json",
+    "morphology": "{body_id}_Morphology.json",
+    "morphology_report": "{body_id}_Body_Sections.md",
+    "unified": "{body_id}_Body_Record.json",
+    "manifest": "manifest.json",
+    "validation": "blender_validation.json"
+  },
+  "quality": {
+    "min_vertices": 5000,
+    "min_triangles": 5000,
+    "min_bones": 50,
+    "max_bbox_error_m": 1e-05,
+    "max_ibm_error": 1e-05
+  }
+}

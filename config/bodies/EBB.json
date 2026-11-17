@@ -1,0 +1,49 @@
+{
+  "schema": "cp77.body.profile/v1",
+  "body_id": "EBB",
+  "display_name": "EBB + RB（Enhanced Big Body，女性全身）",
+  "asset_version": "0.0.0-placeholder",
+  "available": false,
+  "status": "AWAITING_SOURCE",
+  "source": {
+    "packs": [],
+    "mesh_json": null,
+    "raw_mesh": null,
+    "cross_check_glb": null,
+    "provenance": "尚未提供",
+    "redistribution": "未知"
+  },
+  "model": {
+    "region": "full_body",
+    "gender": "female",
+    "appearance": null,
+    "note": "占位档案：拿到 EBB 身体模组包后填写 source.* 并把 available 置为 true。注意：本工程实际接入的是 EBBRB（big booty）变体，见 config/bodies/EBBRB.json；纯 EBB 变体未下载，保持本文件为 AWAITING_SOURCE"
+  },
+  "rig": {
+    "mode": "hierarchy_only",
+    "rig_json": "references/rigs/json/player_woman_base_deformations.rig.json",
+    "rig_name": "player_woman_base_deformations",
+    "expected_rig_bones": 183,
+    "note": "EBB 为自定义身形，其绑定姿势预计与 vanilla 不同；rig 只取父子关系"
+  },
+  "expectations": null,
+  "output": {
+    "dir": "references/bodies/{body_id}/{asset_version}",
+    "static": "{body_id}_Body_Static.glb",
+    "skinned": "{body_id}_Body_Skinned.glb",
+    "skeleton": "{body_id}_Skeleton.json",
+    "weights": "{body_id}_Weight_Analysis.json",
+    "morphology": "{body_id}_Morphology.json",
+    "morphology_report": "{body_id}_Body_Sections.md",
+    "unified": "{body_id}_Body_Record.json",
+    "manifest": "manifest.json",
+    "validation": "blender_validation.json"
+  },
+  "quality": {
+    "min_vertices": 5000,
+    "min_triangles": 5000,
+    "min_bones": 50,
+    "max_bbox_error_m": 1e-05,
+    "max_ibm_error": 1e-05
+  }
+}
