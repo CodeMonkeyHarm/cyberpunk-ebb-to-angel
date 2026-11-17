@@ -1,0 +1,21 @@
+{
+  "source_body": "EBBRB",
+  "target_body": "ANGEL",
+  "displacement_scale": 0.6,
+  "policy": {
+    "ankle": "SKIP",
+    "calf": "SKIP",
+    "knee": "SKIP",
+    "thigh": "APPLY",
+    "hip": "APPLY_LOW_FREQ",
+    "pelvis": "APPLY_LOW_FREQ",
+    "waist": "SKIP",
+    "chest": "SKIP",
+    "shoulder": "SKIP",
+    "upper_arm": "SKIP",
+    "_attenuation": 0.6,
+    "_smooth_iters": 6,
+    "_taper_width_m": 0.02,
+    "_sampling_radius_m": 0.045
+  }
+}

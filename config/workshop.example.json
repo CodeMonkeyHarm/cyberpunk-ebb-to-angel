@@ -1,0 +1,50 @@
+{
+  "workshop_root": null,
+  "python": {
+    "executable": null,
+    "version": null
+  },
+  "blender": {
+    "exe": null,
+    "version": null,
+    "script_dir": "blender/scripts",
+    "timeout_sec": 1800
+  },
+  "wolvenkit": {
+    "cli": null,
+    "version": null,
+    "alternates": [],
+    "timeout_sec": 3600
+  },
+  "game": {
+    "dir": null,
+    "exe": null,
+    "installed": false,
+    "note": null
+  },
+  "depot": null,
+  "cp77_addon": null,
+  "dirs": {
+    "config": "config",
+    "inbox": "inbox",
+    "projects": "projects",
+    "references": "references",
+    "knowledge": "knowledge",
+    "automation": "automation",
+    "blender": "blender",
+    "logs": "logs",
+    "reports": "reports",
+    "skills": "skills"
+  },
+  "limits": {
+    "subprocess_timeout_sec": 1800,
+    "max_project_bytes": null
+  },
+  "policy": {
+    "source_readonly": true,
+    "backup_before_write": true,
+    "require_confirm_for_game_install": true,
+    "no_unverified_success": true
+  },
+  "detected_at": null
+}
